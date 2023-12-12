@@ -3,6 +3,30 @@ import React, { useState } from 'react'
 import "./App.css"
 const App = () => {
 
+    const popup = document.querySelector("#installment");
+    const btn = document.querySelector(".installment__btn");
+    const btnCloser = document.querySelector(".installment__closer");
+
+    btn.addEventListener("click", function () {
+        openModal();
+    });
+
+    btnCloser.addEventListener("click", function () {
+        closePopup();
+    });
+
+    function openModal() {
+        // open = !open;
+        if (open) {
+            popup.classList.add("open");
+        } else {
+            popup.classList.add("open");
+        }
+    }
+
+    function closePopup() {
+        popup.classList.remove("open");
+    }
     return (
         <>
             <div>
